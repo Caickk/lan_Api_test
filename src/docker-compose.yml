@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  servidor1:
+    build: ./servidor1
+    container_name: servidor1
+    ports:
+      - "8001:8000"
+    networks:
+      - rede_django
+
+  servidor2:
+    build: ./servidor2
+    container_name: servidor2
+    ports:
+      - "8002:8000"
+    networks:
+      - rede_django
+
+  servidor3:
+    build: ./servidor3
+    container_name: servidor3
+    ports:
+      - "8003:8000"
+    networks:
+      - rede_django
+
+networks:
+  rede_django:
+    driver: bridge
