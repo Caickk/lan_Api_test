@@ -28,6 +28,3 @@ services:
 networks:
   rede_django:
     driver: bridge
-
-ports:
-  - "8000:8000"
